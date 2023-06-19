@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "oldmandev/react-app"
+    dockerimagename = "oldmandev17/react-app"
     dockerImage = ""
   }
 
@@ -11,8 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git credentialsId: 'github-credentials',
-        url: 'https://github.com/oldmandev17/jenkins-kubernetes-deployment.git'
+        git 'https://github.com/oldmandev17/jenkins-kubernetes-deployment.git'
       }
     }
 
