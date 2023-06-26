@@ -11,8 +11,9 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        // git 'https://github.com/oldmandev17/jenkins-kubernetes-deployment.git'
-        echo 'checkout source the application...'
+        git url 'https://github.com/oldmandev17/jenkins-kubernetes-deployment.git', branch: 'main',
+        credentialsId: 'github-credentials'
+        // echo 'checkout source the application...'
       }
     }
 
